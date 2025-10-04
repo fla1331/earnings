@@ -1,12 +1,12 @@
-// Carrega templates via URL absoluta
+// Carrega automaticamente templates via data-include
 document.addEventListener("DOMContentLoaded", function () {
   const elements = document.querySelectorAll("[data-include]");
 
   elements.forEach(el => {
-    const url = el.getAttribute("data-include");
-    fetch(url)
+    const file = el.getAttribute("data-include");
+    fetch(file)
       .then(res => res.text())
       .then(data => el.innerHTML = data)
-      .catch(() => el.innerHTML = `<p style="color:red">Erro ao carregar ${url}</p>`);
+      .catch(() => el.innerHTML = `<p style="color:red">Erro ao carregar ${file}</p>`);
   });
 });
