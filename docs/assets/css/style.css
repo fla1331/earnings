@@ -1,251 +1,191 @@
-<style>
-        /* Base CSS for Review Nexus Look and Feel */
+/*
+ * Estilos Base e Responsivos (style.css)
+ * Estrutura: Header, Conteúdo Principal, Footer e Seção Legal
+ */
 
-        :root {
-            --primary-color: #1a56db; /* Azul forte */
-            --secondary-color: #38a169; /* Verde para sucesso/CTA */
-            --text-color: #333;
-            --light-bg: #f7f7f7;
-            --dark-bg: #2d3748;
-            --white: #ffffff;
-            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+/* 1. Reset Básico e Variáveis */
+:root {
+    --color-primary: #0056b3; /* Azul escuro */
+    --color-secondary: #00aaff; /* Azul claro para destaque */
+    --color-background: #f4f4f9; /* Cinza claro */
+    --color-text: #333; /* Texto escuro */
+    --color-light-text: #fff; /* Texto claro */
+    --font-family-base: 'Inter', sans-serif;
+}
 
-        body {
-            font-family: 'Inter', Arial, sans-serif;
-            line-height: 1.7;
-            color: var(--text-color);
-            background-color: var(--light-bg);
-            margin: 0;
-            padding: 0;
-        }
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
+/* 2. Estilo do Corpo */
+body {
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Garante que o footer fique na parte inferior */
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita rolagem horizontal em excesso */
+}
 
-        /* Header */
-        header {
-            background-color: var(--dark-bg);
-            color: var(--white);
-            padding: 1rem 0;
-            box-shadow: var(--shadow);
-        }
+/* 3. Estilo do Cabeçalho (Header) */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-light-text);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 
-        .site-title a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 1.8rem;
-            font-weight: 700;
-        }
-        
-        /* Simulação de Layout Flex para Header/Nav */
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        header nav a {
-            color: var(--white);
-            text-decoration: none;
-            margin-left: 1.5rem;
-            font-weight: 500;
-            transition: color 0.3s;
-        }
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-light-text);
+}
 
-        header nav a:hover {
-            color: var(--primary-color);
-        }
+.nav a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
+}
 
-        /* Main Content Layout */
-        .main-layout {
-            display: flex;
-            flex-direction: column;
-            gap: 2rem;
-            padding: 2rem 0;
-        }
-        @media (min-width: 1024px) {
-            .main-layout {
-                flex-direction: row;
-                gap: 3rem;
-            }
-            .content {
-                flex: 3;
-            }
-            .sidebar {
-                flex: 1;
-                position: sticky;
-                top: 2rem;
-                align-self: flex-start;
-            }
-        }
+.nav a:hover {
+    color: var(--color-secondary);
+}
+
+/* 4. Estilo do Conteúdo Principal (Main Content) */
+.main-content {
+    flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Estrutura básica de grid para o conteúdo (útil para layouts de 2 ou 3 colunas) */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* 5. Estilo do Rodapé (Footer) */
+.footer {
+    background-color: var(--color-text); /* Fundo escuro */
+    color: var(--color-light-text);
+    padding: 2rem 1.5rem;
+    margin-top: auto; /* Garante que ocupe a parte inferior da tela */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Seção de Links ou Informações no Footer */
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-secondary);
+}
 
 
-        .content {
-            background-color: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
+/* 6. Estilo da Seção Legal (Abaixo do Footer Principal) */
+.legal-section {
+    background-color: #222; /* Um pouco mais escuro que o footer */
+    color: #ccc;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
 
-        /* Typography and Headings */
-        h1, h2, h3 {
-            color: var(--primary-color);
-            line-height: 1.2;
-            margin-top: 1.5rem;
-            margin-bottom: 1rem;
-        }
+/* 7. Responsividade (Mobile First) */
 
-        h1 { font-size: 2.2rem; }
-        h2 { font-size: 1.8rem; border-bottom: 2px solid var(--light-bg); padding-bottom: 0.5rem; }
-        h3 { font-size: 1.4rem; }
+/* Para telas maiores (ex: Tablet e Desktop) */
+@media (min-width: 768px) {
+    /* Ajuste do Header */
+    .header {
+        padding: 1rem 2rem;
+    }
 
-        p {
-            margin-bottom: 1rem;
-        }
+    /* Ajuste do Conteúdo Principal */
+    .main-content {
+        padding: 0 2rem;
+    }
 
-        .featured-image {
-            width: 100%;
-            height: auto;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-            box-shadow: var(--shadow);
-            max-width: 100%;
-            height: auto;
-        }
+    /* Exemplo de grid para desktop (2 colunas) */
+    .content-grid.desktop-two-columns {
+        grid-template-columns: 2fr 1fr;
+    }
+}
 
-        /* Table of Contents (TOC) */
-        .toc {
-            background-color: var(--light-bg);
-            border: 1px solid #ddd;
-            padding: 1rem;
-            border-radius: 8px;
-            margin-bottom: 2rem;
-        }
-        .toc h2 {
-            color: var(--text-color);
-            border-bottom: none;
-            margin-top: 0;
-            font-size: 1.5rem;
-        }
-        .toc ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .toc ul li {
-            margin-bottom: 0.5rem;
-        }
-        .toc ul ul {
-            padding-left: 1.5rem;
-            margin-top: 0.5rem;
-            list-style: disc;
-        }
-        .toc a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        .toc a:hover {
-            text-decoration: underline;
-        }
+/* Para telas muito pequenas (Mobile) */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-        /* CTA Button */
-        .btn-cta {
-            display: inline-block;
-            background-color: var(--secondary-color);
-            color: var(--white);
-            text-decoration: none;
-            padding: 0.8rem 1.5rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 700;
-            text-align: center;
-            transition: background-color 0.3s, transform 0.2s;
-            margin: 1rem 0;
-            box-shadow: 0 4px 15px rgba(56, 161, 105, 0.4);
-        }
-        .btn-cta:hover {
-            background-color: #2f855a; /* Tom mais escuro */
-            transform: translateY(-2px);
-        }
+    .nav {
+        margin-top: 0.75rem;
+        width: 100%;
+        text-align: center;
+    }
 
-        .cta {
-            background-color: #e6f7ef; /* Fundo suave para a seção CTA */
-            border: 1px dashed var(--secondary-color);
-            padding: 2rem;
-            border-radius: 12px;
-            text-align: center;
-            margin: 2rem 0;
-        }
+    .nav a {
+        display: block;
+        margin: 0.5rem 0;
+        margin-left: 0;
+    }
 
-        /* Comparison Table */
-        .comparison-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 1.5rem 0;
-            box-shadow: var(--shadow);
-            border-radius: 8px;
-            overflow: hidden;
-        }
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
 
-        .comparison-table thead tr {
-            background-color: var(--primary-color);
-            color: var(--white);
-        }
-
-        .comparison-table th, .comparison-table td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .comparison-table tbody tr:nth-child(even) {
-            background-color: #f7f7f7;
-        }
-
-        .comparison-table td:first-child { color: var(--secondary-color); font-weight: 600; }
-        .comparison-table td:last-child { color: #e53e3e; }
-
-        /* Sidebar */
-        .sidebar {
-            background-color: var(--white);
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: var(--shadow);
-        }
-        .sidebar h3 {
-            color: var(--primary-color);
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 0.5rem;
-        }
-        .sidebar ul {
-            list-style: none;
-            padding-left: 0;
-        }
-        .sidebar ul li a {
-            color: var(--text-color);
-            text-decoration: none;
-            display: block;
-            padding: 0.4rem 0;
-            border-bottom: 1px dotted #eee;
-        }
-        .sidebar ul li a:hover {
-            color: var(--primary-color);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-bg);
-            color: var(--white);
-            text-align: center;
-            padding: 1rem 0;
-            font-size: 0.9rem;
-        }
-
-        footer a {
-            color: var(--primary-color);
-            text-decoration: none;
-        }
-        
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
+}
