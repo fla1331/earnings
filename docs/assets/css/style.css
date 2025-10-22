@@ -1,47 +1,191 @@
+/*
+ * Estilos Base e Responsivos (style.css)
+ * Estrutura: Header, Conteúdo Principal, Footer e Seção Legal
+ */
+
+/* 1. Reset Básico e Variáveis */
+:root {
+    --color-primary: #0056b3; /* Azul escuro */
+    --color-secondary: #00aaff; /* Azul claro para destaque */
+    --color-background: #f4f4f9; /* Cinza claro */
+    --color-text: #333; /* Texto escuro */
+    --color-light-text: #fff; /* Texto claro */
+    --font-family-base: 'Inter', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Estilo do Corpo */
 body {
-  font-family: 'Roboto', Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
+    font-family: var(--font-family-base);
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column; /* Garante que o footer fique na parte inferior */
+    min-height: 100vh;
+    overflow-x: hidden; /* Evita rolagem horizontal em excesso */
 }
 
-header, footer {
-  background: #333;
-  color: #fff;
-  padding: 15px;
+/* 3. Estilo do Cabeçalho (Header) */
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-light-text);
+    padding: 1rem 1.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-header h1, footer p {
-  margin: 0;
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 15px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--color-light-text);
 }
 
-nav a {
-  color: #fff;
-  text-decoration: none;
+.nav a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    margin-left: 1.5rem;
+    padding: 0.5rem 0;
+    transition: color 0.3s;
 }
 
-main {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  gap: 20px;
-  padding: 20px;
-  max-width: 1000px;
-  margin: auto;
+.nav a:hover {
+    color: var(--color-secondary);
 }
 
-aside {
-  background: #f4f4f4;
-  padding: 20px;
-  border: 1px solid #ddd;
+/* 4. Estilo do Conteúdo Principal (Main Content) */
+.main-content {
+    flex-grow: 1; /* Faz com que o conteúdo principal ocupe o espaço restante */
+    max-width: 1200px;
+    width: 100%;
+    margin: 2rem auto;
+    padding: 0 1.5rem;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
+/* Estrutura básica de grid para o conteúdo (útil para layouts de 2 ou 3 colunas) */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+}
+
+/* 5. Estilo do Rodapé (Footer) */
+.footer {
+    background-color: var(--color-text); /* Fundo escuro */
+    color: var(--color-light-text);
+    padding: 2rem 1.5rem;
+    margin-top: auto; /* Garante que ocupe a parte inferior da tela */
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+/* Seção de Links ou Informações no Footer */
+.footer-section {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-section h4 {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+}
+
+.footer-section p, .footer-section ul {
+    font-size: 0.9rem;
+    list-style: none;
+}
+
+.footer-section ul li a {
+    color: var(--color-light-text);
+    text-decoration: none;
+    display: block;
+    padding: 0.3rem 0;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: var(--color-secondary);
+}
+
+
+/* 6. Estilo da Seção Legal (Abaixo do Footer Principal) */
+.legal-section {
+    background-color: #222; /* Um pouco mais escuro que o footer */
+    color: #ccc;
+    padding: 0.75rem 1.5rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* 7. Responsividade (Mobile First) */
+
+/* Para telas maiores (ex: Tablet e Desktop) */
+@media (min-width: 768px) {
+    /* Ajuste do Header */
+    .header {
+        padding: 1rem 2rem;
+    }
+
+    /* Ajuste do Conteúdo Principal */
+    .main-content {
+        padding: 0 2rem;
+    }
+
+    /* Exemplo de grid para desktop (2 colunas) */
+    .content-grid.desktop-two-columns {
+        grid-template-columns: 2fr 1fr;
+    }
+}
+
+/* Para telas muito pequenas (Mobile) */
+@media (max-width: 600px) {
+    .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        margin-top: 0.75rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav a {
+        display: block;
+        margin: 0.5rem 0;
+        margin-left: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 1.5rem;
+    }
 }
