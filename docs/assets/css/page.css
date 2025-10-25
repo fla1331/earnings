@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earnings Review Nexus - Honest Reviews for Your Success</title>
+    <meta name="description" content="Discover honest and in-depth reviews of the best digital products and courses in the financial and money-making niche.">
+    <link rel="canonical" href="https://earnings.reviewnexus.blog/en/index.html">
+    <link rel="alternate" hreflang="x-default" href="https://earnings.reviewnexus.blog/en/index.html">
+    <link rel="stylesheet" href="/assets/css/page.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <a href="/en/index.html" class="site-title">Earnings Review Nexus</a>
+            <nav>
+                <a href="/en/index.html">Home</a>
+                <a href="/en/about.html">About</a>
+                <a href="/en/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-center">
+        <div class="logo">
+            <!-- Simple Logo Placeholder -->
+            <svg width="60" height="60" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="2" y="4" width="20" height="16" rx="2" fill="var(--primary-color)"/>
+                <path d="M12 17L12 7M15 14L12 17L9 14" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M12 7L12 17" stroke="var(--primary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <circle cx="12" cy="12" r="8" stroke="#fff" stroke-width="2" fill="none"/>
+                <path d="M12 12L12 12" stroke="#fff" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+        </div>
+        <h1 class="site-title" style="font-size: 3.5rem; margin-top: 10px;">Earnings Review Nexus</h1>
+        <p>Your trusted source for honest, in-depth reviews on the latest money-making courses, digital tools, and financial strategies.</p>
+        <a href="/en/category/woodworking/">Start Reading Reviews</a>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Earnings Review Nexus. All Rights Reserved.</p>
+        <p>
+            <a href="/en/privacy.html">Privacy Policy</a> | 
+            <a href="/en/terms.html">Terms of Service</a> |
+            <a href="/en/affiliate-disclosure.html">Affiliate Disclosure</a>
+        </p>
+    </footer>
+</body>
+</html>

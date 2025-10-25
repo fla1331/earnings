@@ -5,29 +5,22 @@
 
   <url>
     <loc>https://earnings.reviewnexus.blog/en/woodprofits/</loc>
-    <lastmod>2025-10-24</lastmod>
+
+    <lastmod>2025-10-25T20:25:00-03:00</lastmod> 
     
-    <!-- hreflang: x-default (assumindo 'en' como padrão) -->
-    <xhtml:link 
-        rel="alternate" 
-        hreflang="x-default" 
-        href="https://earnings.reviewnexus.blog/en/woodprofits/" />
-        
-    <!-- hreflang: self-referencing -->
-    <xhtml:link 
-        rel="alternate" 
-        hreflang="en-US" 
-        href="https://earnings.reviewnexus.blog/en/woodprofits/" />
-        
-    <!-- hreflang: other language -->
-    <xhtml:link 
-        rel="alternate" 
-        hreflang="pt-BR" 
-        href="https://earnings.reviewnexus.blog/br/woodprofits/" />
-        
-    <!-- image:image tag -->
     <image:image>
-      <image:loc>https://earnings.reviewnexus.blog/en/woodprofits.jpg</image:loc>
+      <image:loc>https://earnings.reviewnexus.blog/assets/img/en/woodprofits/wood-earn-money.jpg</image:loc>
     </image:image>
   </url>
+
+  <url>
+    <loc>https://earnings.reviewnexus.blog/en/vip-indicators/</loc>
+    
+    <lastmod>2025-10-24T15:10:00-03:00</lastmod> 
+    
+    <image:image>
+      <image:loc>https://earnings.reviewnexus.blog/assets/img/en/vip-indicators/earn-money.jpg</image:loc>
+    </image:image>
+  </url>
+
 </urlset>
