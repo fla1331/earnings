@@ -233,6 +233,7 @@ p {
     background-color: #2f855a; 
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(56, 161, 105, 0.6);
+    color:#fff !important
 }
 
 /* --- SIDEBAR --- */
