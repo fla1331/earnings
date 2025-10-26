@@ -5,14 +5,14 @@
 
 /* Variáveis de Cores e Estilos */
 :root {
-    --primary-color: #007bff; /* Azul primário */
+    --primary-color: #693efe; /* Azul primário */
     --secondary-color: #6c757d; /* Cinza secundário */
     --background-color: #f8f9fa; /* Fundo leve */
     --content-bg: #ffffff; /* Fundo do Conteúdo/Cards */
     --text-color: #212529; /* Texto Principal Escuro */
-    --link-color: #007bff;
-    --link-hover: #0056b3;
-    --border-color: #dee2e6;
+    --link-color: #693efe;
+    --link-hover: #693efe;
+    --border-color: #040505;
     --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
