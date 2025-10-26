@@ -256,7 +256,7 @@ p {
     border-bottom: 1px dotted #eee;
 }
 .sidebar ul li a:hover {
-    color: var(--secondary-color);
+    color: #693efe;
 }
 
 /* --- FOOTER --- */
