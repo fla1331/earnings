@@ -235,7 +235,7 @@ p {
     box-shadow: 0 6px 20px rgba(56, 161, 105, 0.6);
     color:#fff !important
 }
-
+img {max-width: 100%;}
 /* --- SIDEBAR --- */
 .sidebar {
     padding: 1.5rem;
