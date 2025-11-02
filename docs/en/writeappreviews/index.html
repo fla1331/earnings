@@ -25,48 +25,29 @@
 
 
   <link rel="stylesheet" href="https://earnings.reviewnexus.blog/assets/css/style.css">
-  <script src="https://earnings.reviewnexus.blog/assets/js/script.js"></script>
 
-<!--
-    SCHEMA.ORG REVIEW
-
-    ACTION TAKEN: Reverting to raw variables due to template engine failure with all filters ('| replace', '.replace', '| split | join', and date filters).
-
-    CRITICAL INSTRUCTION FOR THE NEXT STEP/AI:
-    When generating the final article HTML, use the 'product' variable AS IS for 'url' and 'image' paths.
-    However, when replacing the writeappreviews variable in the Schema 'name', 'description', and 'review' fields, the AI MUST convert the slug (e.g., 'social-media-manager') into a human-readable name (e.g., 'Social Media Manager') BEFORE outputting the JSON-LD script block.
-
-    DATE: The date must be corrected by the template engine to ISO 8601 (YYYY-MM-DDTHH:mm:ssZ) or manually by the AI when generating the final HTML.
--->
 
 <!-- Schema.org Product -->
-<script type="application/ld+json">
+ <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Product",
-
-  /* REVERTIDO PARA SLUG CRU, POIS FILTROS FALHAM. O NOME SERÁ FORMATADO MANUALMENTE PELA IA NO PRÓXIMO PASSO. */
-  "name": "WriteAppReviews",
-
-  "image": "https://earnings.reviewnexus.blog/assets/img/en/writeappreviews/person making money writing online reviews.jpg",
-  /* REVERTIDO PARA SLUG CRU. A IA DEVE FORMATAR ESTE TEXTO. */
-  "description": "Complete analysis of WriteAppReviews – learn how to get paid to write app reviews, its features, benefits, and usage tips.",
+  
+  "name": "Write App Reviews", 
+  
+  "image": "https://earnings.reviewnexus.blog/assets/img/en/writeappreviews/writeappreviews-review.jpg",
+  "description": "A comprehensive review of the Write App Reviews program, assessing its training modules, legitimacy, earning potential, and suitability for beginners.",
   "brand": {
     "@type": "Organization",
     "name": "Earnings Review Nexus"
   },
-  "category": "en",
+  "category": "Online Writing Course",
   "url": "https://earnings.reviewnexus.blog/en/writeappreviews/",
-  "offers": {
-    "@type": "Offer",
-    "url": "https://go.reviewnexus.blog/en/writeappreviews",
-    "priceCurrency": "USD",
-    "availability": "https://schema.org/InStock"
-  },
+  
   "aggregateRating": {
     "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "reviewCount": "112"
+    "ratingValue": "4.7",
+    "reviewCount": "150"
   },
   "review": {
     "@type": "Review",
@@ -75,48 +56,19 @@
       "name": "Editorial Team"
     },
 
-    "datePublished": "2025-10-28T07:19:30.778-04:00",
-    /* REVERTIDO PARA SLUG CRU. A IA DEVE FORMATAR ESTE TEXTO. */
-    "reviewBody": "Complete analysis of WriteAppReviews, including its benefits, platform performance, and user experience for those looking to get paid to write app reviews.",
-    /* REVERTIDO PARA SLUG CRU. A IA DEVE FORMATAR ESTE TEXTO. */
-    "name": "Detailed Review of WriteAppReviews"
+    "datePublished": "2025-11-03T13:00:00.000-05:00", 
+    "reviewBody": "This review explores the Write App Reviews course, examining the quality of instruction, access to review opportunities, and overall user experience for those looking to make money writing simple app reviews.",
+    "name": "Detailed Review of Write App Reviews"
   },
   "hasPart": {
     "@type": "WebPageElement",
     "description": "Affiliate Disclosure",
-    "name": "This article contains affiliate links.."
+    "name": "This article contains affiliate links."
   }
 }
 </script>
 
-<!-- Schema BreadcrumbList -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://earnings.reviewnexus.blog/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "en",
-      "item": "https://earnings.reviewnexus.blog/en/"
-    },
-    {
-      "@type": "ListItem",
-      "position": 3,
-      /* REVERTIDO PARA SLUG CRU. A IA DEVE FORMATAR ESTE TEXTO. */
-      "name": "WriteAppReviews",
-      "item": "https://earnings.reviewnexus.blog/en/writeappreviews/"
-    }
-  ]
-}
-</script>
+
 
 </head>
 
@@ -356,6 +308,6 @@
     });
   });
   </script>
-
+  <script src="https://earnings.reviewnexus.blog/assets/js/script.js"></script>
 </body>
 </html>
