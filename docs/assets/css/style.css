@@ -55,7 +55,7 @@ a:hover {
 
 .home-center p {
     font-size: 1.3rem;
-    color: var(--text-color)
+    color: var(--text-color);
     max-width: 600px;
     margin-bottom: 30px;
 }
