@@ -259,51 +259,6 @@
     <button id="declineCookies">Decline</button>
   </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const banner = document.getElementById("cookie-banner");
-    if (!localStorage.getItem("cookiesAccepted")) {
-      banner.style.display = "block";
-    }
-    document.getElementById("acceptCookies").addEventListener("click", () => {
-      localStorage.setItem("cookiesAccepted", "true");
-      banner.style.display = "none";
-    });
-    document.getElementById("declineCookies").addEventListener("click", () => {
-      banner.style.display = "none";
-    });
-
-    // Auto-generate TOC
-    const toc = document.querySelector('.toc ul');
-    const headings = document.querySelectorAll('article.content h2, article.content h3');
-
-    headings.forEach(heading => {
-        const id = heading.id || heading.textContent.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-*|-*$/g, '');
-        heading.id = id;
-        
-        const listItem = document.createElement('li');
-        const link = document.createElement('a');
-        link.href = '#' + id;
-        link.textContent = heading.textContent;
-        
-        if (heading.tagName === 'H3') {
-            const lastH2Li = toc.lastElementChild;
-            if (lastH2Li && lastH2Li.querySelector('ul')) {
-                lastH2Li.querySelector('ul').appendChild(listItem);
-            } else if (lastH2Li) {
-                const sublist = document.createElement('ul');
-                lastH2Li.appendChild(sublist);
-                sublist.appendChild(listItem);
-            } else { // Should not happen if H2s precede H3s
-                toc.appendChild(listItem); 
-            }
-        } else {
-            toc.appendChild(listItem);
-        }
-        listItem.appendChild(link);
-    });
-  });
-  </script>
   <script src="https://earnings.reviewnexus.blog/assets/js/scripts.js"></script>
 </body>
 </html>
