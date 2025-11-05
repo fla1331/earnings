@@ -11,7 +11,7 @@
     --shadow-md: 0 4px 10px rgba(0, 0, 0, 0.08); /* Sombra mais destacada */
     --success-bg: #e5ffe0; /* Fundo sutil para sucesso/CTA */
     --cta-shadow: 0 4px 15px rgba(56, 176, 0, 0.4);
-    --hover-link: #40c204 !important; /* Verde para hover em links */
+    --hover-link: #40c204; /* Verde para hover em links */
 }
 
 /* --- RESET & TIPOGRAFIA BASE --- */
@@ -84,7 +84,7 @@ header nav a {
 
 header nav a:hover {
     text-decoration: none;
-    color: var(--hover-link);
+    color: var(--hover-link) !important;
 }
 
 /* --- LAYOUT PRINCIPAL E CONTEÚDO --- */
@@ -279,7 +279,7 @@ footer a {
 footer a:hover {
     opacity: 1;
     text-decoration: underline;
-     color: var(--hover-link);
+     color: var(--hover-link) !important;
 }
 
 /* --- AVALIAÇÃO VISUAL DE ESTRELAS (Para o bloco de estrelas simples) --- */
