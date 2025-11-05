@@ -25,6 +25,12 @@ body {
     -webkit-font-smoothing: antialiased;
 }
 
+/* --- REGRA DE ALTA ESPECIFICIDADE PARA VENCER CONFLITOS OCULTOS --- */
+/* Esta regra garante que, se o banner estiver visível (via JS), ele seja forçado a usar flex. */
+.cookie-banner[style*="display: flex"] { 
+    display: flex !important;
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
