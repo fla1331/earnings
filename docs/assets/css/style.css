@@ -42,7 +42,25 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- HEADER (TOPO SÓLIDO AZUL MARINHO) --- */
+/* --- HOME PAGE --- */
+.home-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - 120px);
+    padding: 20px;
+}
+
+.home-center p {
+    font-size: 1.3rem;
+    color: var(--text-color)
+    max-width: 600px;
+    margin-bottom: 30px;
+}
+
+/* --- HEADER --- */
 header {
     background-color: var(--dark-bg);
     color: var(--white);
@@ -293,80 +311,6 @@ footer a:hover {
     background-color: var(--primary-color);
     color: var(--white);
 }
-
-
-/* Special Layouts */
-.home-center {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    min-height: calc(100vh - 120px);
-    padding: 20px;
-}
-.home-center .site-title {
-    font-size: 3.5rem;
-    margin-top: 10px;
-    color: var(--text-color);
-    font-weight: 800;
-}
-.home-center p {
-    font-size: 1.2rem;
-    color: var(--secondary-color);
-    max-width: 600px;
-    margin-bottom: 30px;
-}
-.home-center a {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: var(--primary-color);
-    color: #fff;
-    border-radius: 6px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: background-color 0.3s;
-}
-.home-center a:hover {
-    background-color: var(--link-hover);
-    text-decoration: none;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-}
-.contact-form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: 600;
-}
-.contact-form input[type="text"],
-.contact-form input[type="email"],
-.contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid var(--border-color);
-    border-radius: 4px;
-}
-.contact-form button {
-    background-color: var(--primary-color);
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
-    transition: background-color 0.3s;
-}
-.contact-form button:hover {
-    background-color: var(--link-hover);
-}
-
 
 
 /* Ajustes de Cookie Banner (Usando a nova paleta) */
