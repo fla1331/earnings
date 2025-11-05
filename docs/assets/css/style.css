@@ -262,13 +262,14 @@ footer {
 }
 
 footer a {
-    color: var(--white);
+    color: var(--white) !important;
     margin: 0 0.8rem;
     opacity: 0.8;
 }
 footer a:hover {
     opacity: 1;
     text-decoration: underline;
+     color: var(--white) !important;
 }
 
 /* --- AVALIAÇÃO VISUAL DE ESTRELAS (Para o bloco de estrelas simples) --- */
