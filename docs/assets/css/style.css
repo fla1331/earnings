@@ -261,12 +261,12 @@ footer {
     margin-top: 3rem;
 }
 
-.footer-nav a {
+.footer a {
     color: var(--white);
     margin: 0 0.8rem;
     opacity: 0.8;
 }
-.footer-nav a:hover {
+.footer a:hover {
     opacity: 1;
     text-decoration: underline;
 }
