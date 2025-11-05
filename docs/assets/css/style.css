@@ -313,15 +313,93 @@ footer a:hover {
 }
 
 
-/* Ajustes de Cookie Banner (Usando a nova paleta) */
+/* Ajustes de Cookie Banner */
 .cookie-banner {
-    /* ... (Mantenha o resto) ... */
+    position: fixed;
+    bottom: 0; /* Fixa na parte inferior */
+    left: 0;
+    width: 100%;
+    /* Fundo escuro e opaco (azul marinho) para ser profissional */
+    background-color: rgba(0, 51, 102, 0.95); /* var(--dark-bg) com transparência */
+    color: var(--white);
+    padding: 1rem 0; /* Padding vertical, controle horizontal no container */
+    
+    /* Configuração Flexbox para alinhar conteúdo e botões */
+    display: none; /* <--- IMPORTANTE: DEIXE 'none' AQUI, MAS O JS VAI MUDAR PARA FLEX! */
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite quebrar em telas pequenas */
+    
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999; /* Garante que fique acima de tudo */
+    font-size: 0.9rem;
+    gap: 1rem; /* Espaçamento entre os elementos */
 }
+
+/* Garante que o conteúdo fique dentro do limite do site */
+.cookie-banner > * {
+    max-width: 1200px;
+    padding: 0 1rem;
+}
+
+.cookie-banner p {
+    margin: 0;
+    flex-grow: 1; /* Permite que o texto ocupe o máximo de espaço */
+    text-align: left;
+}
+
+.cookie-banner a {
+    color: var(--secondary-color); /* Destaque em Verde Crescimento */
+    text-decoration: underline;
+}
+
+/* Botões */
 .cookie-banner button {
+    /* Use var(--secondary-color) para o botão principal (Accept) */
+    /* E var(--primary-color) para o botão secundário (Decline) */
+    
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: 600;
+    white-space: nowrap; /* Impede que o texto do botão quebre */
+}
+
+/* Botão de Aceitar (Primário - Crescimento) */
+#acceptCookies {
+    background-color: var(--secondary-color);
+    color: var(--white);
+    order: 3; /* Coloca o botão Accept por último */
+}
+#acceptCookies:hover {
+    background-color: #267900; /* Verde mais escuro no hover */
+}
+
+/* Botão de Recusar (Secundário - Confiança/Contraste) */
+#declineCookies {
     background-color: var(--primary-color);
     color: var(--white);
-    /* ... (Mantenha o resto) ... */
+    order: 4; /* Coloca o botão Decline depois do Accept */
 }
-.cookie-banner button:hover {
-    background-color: #002244;
+#declineCookies:hover {
+    background-color: #002244; /* Azul Marinho mais escuro */
+}
+
+/* Ajuste para telas muito pequenas */
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+    .cookie-banner p {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+    .cookie-banner button {
+        width: 100%;
+        margin: 0.2rem 0;
+    }
 }
