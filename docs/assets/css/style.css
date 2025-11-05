@@ -244,7 +244,6 @@ p {
     letter-spacing: 0.5px;
 }
 .btn-cta:hover {
-    background-color: #267900; /* Verde mais escuro no hover */
     transform: translateY(-3px); /* Efeito 3D mais pronunciado */
     box-shadow: 0 8px 25px rgba(56, 176, 0, 0.6);
     color: var(--white) !important;
