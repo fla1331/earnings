@@ -57,16 +57,23 @@ header .container {
 
 /* Título do Site (Earnings) */
 .site-title {
-    font-size: 2.0rem; /* Um pouco maior */
-    font-weight: 800; /* Mais peso */
-    letter-spacing: -0.5px; /* Mais profissional */
+    line-height: 0; 
+    margin: 0;
 }
 .site-title a {
-    color: var(--white);
+   background-image: url('https://earnings.reviewnexus.blog/assets/img/logo.png'); 
+    background-size: contain; 
+    background-repeat: no-repeat;
+    background-position: left center;
+    display: block;
+    max-width: 220px; 
+    height: 50px;
+    text-indent: -9999px; 
+    overflow: hidden; 
     text-decoration: none;
 }
 
-/* Navegação do Header (Se houver) */
+
 header nav a {
     color: var(--white);
     text-decoration: none;
@@ -248,6 +255,7 @@ p {
     box-shadow: 0 8px 25px rgba(56, 176, 0, 0.6);
     color: var(--white) !important;
     text-decoration: none !important;
+    background: #40c204 !important;
 }
 img {max-width: 100%;}
 
