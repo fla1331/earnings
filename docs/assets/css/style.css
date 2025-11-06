@@ -457,25 +457,30 @@ footer a:hover {
     }
 
     .main-nav {
-        /* Posição padrão: escondido */
-        display: none;
-        position: absolute;
-        top: 88px; /* Abaixo do header */
+      position: absolute;
+        top: 88px; /* Posiciona abaixo do header */
         left: 0;
         width: 100%;
-        background-color: var(--dark-bg);
+        background-color: var(--dark-bg); /* Fundo do menu */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 10;
-        padding: 10px 0;
+
+        /* Propriedades para transição suave */
+        max-height: 0; /* Começa fechado */
+        opacity: 0; /* Começa invisível */
+        overflow: hidden; /* Esconde o conteúdo que transborda */
+        transition: max-height 0.4s ease-out, opacity 0.3s ease-in; /* Efeito suave */
     }
 
     .main-nav.is-open {
-        display: block; /* O JS adiciona a classe 'is-open' para mostrar */
+       max-height: 500px; /* Suficiente para mostrar todos os links */
+        opacity: 1; /* Torna visível */
     }
     
     .main-nav ul {
         flex-direction: column; /* Links um abaixo do outro */
         align-items: center;
+        padding: 10px 0;
     }
     .main-nav li {
         width: 100%;
