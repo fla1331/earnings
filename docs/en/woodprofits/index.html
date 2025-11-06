@@ -308,21 +308,6 @@
     <button id="declineCookies">Decline</button>
   </div>
 
-  <script>
-  document.addEventListener("DOMContentLoaded", function() {
-    const banner = document.getElementById("cookie-banner");
-    if (!localStorage.getItem("cookiesAccepted")) {
-      banner.style.display = "block";
-    }
-    document.getElementById("acceptCookies").addEventListener("click", () => {
-      localStorage.setItem("cookiesAccepted", "true");
-      banner.style.display = "none";
-    });
-    document.getElementById("declineCookies").addEventListener("click", () => {
-      banner.style.display = "none";
-    });
-  });
-  </script>
     <script src="https://earnings.reviewnexus.blog/assets/js/scripts.js"></script>
 </body>
 </html>
