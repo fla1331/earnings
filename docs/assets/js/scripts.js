@@ -1,39 +1,33 @@
-// Obtém referências aos elementos do banner
-const cookieBanner = document.getElementById('cookie-banner');
-const acceptButton = document.getElementById('acceptCookies');
-const declineButton = document.getElementById('declineCookies');
+document.addEventListener("DOMContentLoaded", function() {
+    // 1. Defina as referências usando as IDs
+    const cookieBanner = document.getElementById('cookie-banner');
+    const acceptButton = document.getElementById('acceptCookies');
+    const declineButton = document.getElementById('declineCookies');
+    
+    // Use uma chave única e limpa
+    const consentKey = 'cookieConsentGiven';
 
-// Chave no localStorage para armazenar o consentimento
-const consentKey = 'cookieConsentGiven';
-
-// 1. Função para verificar e exibir o banner
-function checkCookieConsent() {
-    // Se o usuário já deu o consentimento, não faz nada
+    // 2. Verifica se o usuário já consentiu
     if (localStorage.getItem(consentKey) === 'true') {
-        cookieBanner.style.display = 'none';
+        // Se sim, não faz nada (o CSS já o esconde)
+        return; 
     } else {
-        // Se ainda não deu, mostra o banner (o padrão no CSS deve ser 'flex')
-        cookieBanner.style.display = 'flex';
+        // 3. Se não, mostra o banner usando "flex"
+        cookieBanner.style.display = "flex";
     }
-}
 
-// 2. Função para salvar o consentimento (independente da escolha)
-function giveConsent() {
-    localStorage.setItem(consentKey, 'true');
-    cookieBanner.style.display = 'none';
-    // Se precisar carregar scripts de rastreamento (Google Analytics, etc.), o código iria aqui!
-}
+    // 4. Lógica de Aceite
+    acceptButton.addEventListener("click", () => {
+        localStorage.setItem(consentKey, "true"); // Salva o aceite
+        cookieBanner.style.display = "none";      // Esconde
+        console.log('Cookies aceitos.');
+        // Aqui entra a chamada para carregar o Google Analytics, etc.
+    });
 
-// 3. Funções para lidar com os cliques
-acceptButton.addEventListener('click', () => {
-    giveConsent();
-    console.log('Cookies aceitos.');
+    // 5. Lógica de Recusa
+    declineButton.addEventListener("click", () => {
+        localStorage.setItem(consentKey, "true"); // Salva a escolha (para não incomodar mais)
+        cookieBanner.style.display = "none";      // Esconde
+        console.log('Cookies recusados.');
+    });
 });
-
-declineButton.addEventListener('click', () => {
-    giveConsent(); // Salva que a escolha foi feita (mesmo que seja recusar)
-    console.log('Cookies recusados. Nenhum script de rastreamento foi carregado.');
-});
-
-// Executa a verificação ao carregar a página
-document.addEventListener('DOMContentLoaded', checkCookieConsent);
