@@ -326,10 +326,9 @@ footer a:hover {
     left: 0;
     width: 100%;
     /* Fundo escuro e opaco (azul marinho) para ser profissional */
-    background-color: rgba(0, 51, 102, 0.95); /* var(--dark-bg) com transparência */
-    color: var(--white);
-    padding: 1rem 0; /* Padding vertical, controle horizontal no container */
-    
+    background-color:var(--light-bg); 
+    color: var(--text-color);
+    padding: 2rem 0; 
     /* Configuração Flexbox para alinhar conteúdo e botões */
     display: none; /* <--- IMPORTANTE: DEIXE 'none' AQUI, MAS O JS VAI MUDAR PARA FLEX! */
     align-items: center;
