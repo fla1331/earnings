@@ -463,7 +463,7 @@ footer a:hover {
         top: 88px; /* Abaixo do header */
         left: 0;
         width: 100%;
-        background-color: var(--dark-bg) /* Fundo branco ou claro */
+        background-color: var(--dark-bg);
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 10;
         padding: 10px 0;
