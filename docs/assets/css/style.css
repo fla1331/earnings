@@ -325,7 +325,6 @@ footer a:hover {
     bottom: 0; /* Fixa na parte inferior */
     left: 0;
     width: 100%;
-    /* Fundo escuro e opaco (azul marinho) para ser profissional */
     background-color:var(--light-bg); 
     color: var(--text-color);
     padding: 2rem 0; 
@@ -387,6 +386,7 @@ footer a:hover {
     background-color: var(--primary-color);
     color: var(--white);
     order: 4; /* Coloca o botão Decline depois do Accept */
+    margin-right: 10px;
 }
 #declineCookies:hover {
     background-color: #002244; /* Azul Marinho mais escuro */
