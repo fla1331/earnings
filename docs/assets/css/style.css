@@ -428,7 +428,7 @@ footer a:hover {
     border: none;
     font-size: 1.5rem;
     cursor: pointer;
-    color: var(--primary-color); /* ou a cor que você usa no texto principal */
+    color: var(--light-bg) /* ou a cor que você usa no texto principal */
 }
 
 .main-nav ul {
@@ -460,10 +460,10 @@ footer a:hover {
         /* Posição padrão: escondido */
         display: none;
         position: absolute;
-        top: 100%; /* Abaixo do header */
+        top: 88px; /* Abaixo do header */
         left: 0;
         width: 100%;
-        background-color: var(--white); /* Fundo branco ou claro */
+        background-color: var(--dark-bg) /* Fundo branco ou claro */
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         z-index: 10;
         padding: 10px 0;
@@ -480,6 +480,7 @@ footer a:hover {
     .main-nav li {
         width: 100%;
         text-align: center;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--primary-color);
+        padding-bottom: 10px;
     }
-}
+}   
