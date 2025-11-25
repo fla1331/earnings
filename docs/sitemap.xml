@@ -13,15 +13,7 @@
     </image:image>
   </url>
 
-  <url>
-    <loc>https://earnings.reviewnexus.blog/en/vip-indicators/</loc>
-    
-    <lastmod>2025-10-24T15:10:00-03:00</lastmod> 
-    
-    <image:image>
-      <image:loc>https://earnings.reviewnexus.blog/assets/img/en/vip-indicators/earn-money.jpg</image:loc>
-    </image:image>
-  </url>
+  
 
 
   <url>
@@ -184,6 +176,17 @@
     
     <image:image>
       <image:loc>https://earnings.reviewnexus.blog/assets/img/en/woodprofits/undefined.jpg</image:loc>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://earnings.reviewnexus.blog/en/vip-indicators/</loc>
+    <lastmod>2025-11-25</lastmod>
+    
+    
+    
+    <image:image>
+      <image:loc>https://earnings.reviewnexus.blog/assets/img/en/vip-indicators/undefined.jpg</image:loc>
     </image:image>
   </url>
 </urlset>
