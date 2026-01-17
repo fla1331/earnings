@@ -3,51 +3,327 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Earnings Review Nexus - Honest Reviews for Your Success</title>
-    <meta name="description" content="Discover honest and in-depth reviews of the best digital products and courses in the financial and money-making niche.">
-    <link rel="canonical" href="https://earnings.reviewnexus.blog/index.html">
-    <link rel="alternate" hreflang="x-default" href="https://earnings.reviewnexus.blog/index.html">
-     <link rel="stylesheet" href="https://earnings.reviewnexus.blog/assets/css/style.css">
+    <title>Earnings | Professional Digital Product Reviews</title>
+    <meta name="description" content="Honest, data-driven reviews of digital courses, software, and online business opportunities.">
     
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --navy-blue: #003366;
+            --success-green: #38B000;
+            --bg-light: #f8fafc;
+            --text-dark: #1e293b;
+            --white: #ffffff;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        /* NAVIGATION */
+        header {
+            background-color: var(--navy-blue);
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 1.5rem;
+        }
+
+        .nav-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--success-green);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--success-green);
+        }
+
+        /* HERO SECTION */
+        .hero {
+            background: linear-gradient(rgba(0, 51, 102, 0.9), rgba(0, 51, 102, 0.9)), 
+                        url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=2070') center/cover;
+            color: var(--white);
+            padding: 8rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2.5rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0.9;
+        }
+
+        .cta-button {
+            background-color: var(--success-green);
+            color: var(--white);
+            padding: 1rem 2.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            display: inline-block;
+            transition: transform 0.2s, background 0.3s;
+            box-shadow: 0 10px 15px -3px rgba(56, 176, 0, 0.3);
+        }
+
+        .cta-button:hover {
+            background-color: #2e8f00;
+            transform: translateY(-2px);
+        }
+
+        /* REVIEWS GRID */
+        .reviews {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: var(--navy-blue);
+            margin-bottom: 1rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card-content {
+            padding: 2rem;
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(56, 176, 0, 0.1);
+            color: var(--success-green);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--navy-blue);
+            font-size: 1.5rem;
+        }
+
+        .rating {
+            color: #fbbf24;
+            margin-bottom: 1rem;
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: #0f172a;
+            color: #94a3b8;
+            padding: 4rem 0 2rem;
+            text-align: center;
+        }
+
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .social-links a {
+            color: #94a3b8;
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--success-green);
+        }
+
+        .copyright {
+            border-top: 1px solid #1e293b;
+            padding-top: 2rem;
+            font-size: 0.875rem;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.5rem; }
+            nav ul { display: none; }
+            .grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-     <header>
-        <div class="container header-content">
-            <h1 class="logo"><a href="/">Earnings Review Nexus</a></h1>
-            <button class="menu-toggle" aria-controls="main-nav" aria-expanded="false">
-                ☰
-            </button>
-            <nav id="main-nav" class="main-nav">
+
+    <header>
+        <div class="container nav-flex">
+            <a href="#" class="logo">Earnings<span>.</span></a>
+            <nav>
                 <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/about">About</a></li>
-                    <li> <a href="/contact">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="#methodology">Methodology</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
-    </header> 
+    </header>
 
-    <main class="home-center">
-        
-        <p>Your trusted source for honest, in-depth reviews on the latest money-making courses, digital tools, and financial strategies.</p>
-        
+    <main>
+        <section class="hero" id="home">
+            <div class="container">
+                <h1>Unlock Real Value.</h1>
+                <p>We analyze the most popular digital products on the market to tell you what's worth your time and money. Honest reviews for smart earners.</p>
+                <a href="#reviews" class="cta-button">Browse Latest Reviews</a>
+            </div>
+        </section>
+
+        <section class="reviews container" id="reviews">
+            <div class="section-header">
+                <h2>Our Latest Insights</h2>
+                <p>Unbiased evaluations of tools, courses, and income opportunities.</p>
+            </div>
+            
+            <div class="grid">
+                <!-- Card 1 -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>AdSense Secrets 2025</h3>
+                        <p>A deep dive into the latest traffic strategies for publishers. Does it still work in the AI era?</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-robot"></i></div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+                        </div>
+                        <h3>AI Copywriter Pro</h3>
+                        <p>We tested 50+ prompts to see if this specialized tool beats the standard GPT-4 models.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card">
+                    <div class="card-content">
+                        <div class="card-icon"><i class="fas fa-wallet"></i></div>
+                        <div class="rating">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <h3>Saas Builder Blueprint</h3>
+                        <p>Is the "No-Code" dream a reality? Reviewing the most popular framework for micro-SaaS.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Earnings. All Rights Reserved.</p>
-        <p>
-            <a href="/privacy.html">Privacy Policy</a> | 
-            <a href="/terms.html">Terms of Service</a> |
-            <a href="/affiliate-disclosure.html">Affiliate Disclosure</a>
-        </p>
+        <div class="container">
+            <span class="footer-logo">Earnings<span>.</span></span>
+            <p>Your trusted source for digital asset auditing and product reviews.</p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="copyright">
+                &copy; 2025 Earnings Review Nexus. All rights reserved.
+            </div>
+        </div>
     </footer>
 
-    <div id="cookie-banner" class="cookie-banner">
-        <p>Usamos cookies para melhorar sua experiência. <a href="/privacy.html">Saiba mais</a>.</p>
-        <button id="acceptCookies">Aceitar</button>
-        <button id="declineCookies">Recusar</button>
-    </div>
-
-    <script src="https://earnings.reviewnexus.blog/assets/js/scripts.js"></script>
 </body>
 </html>
