@@ -1,0 +1,9 @@
+# ROBOTS.TXT 
+User-agent: *
+Allow: /
+Crawl-delay: 3  
+Sitemap: https://earnings.reviewnexus.blog/sitemap.xml
+
+# GitHub Pages optimization
+User-agent: GPTBot
+Disallow: /
